@@ -1,6 +1,6 @@
-const NETWORK_ID=1;const RPC_URL='https://mainnet.infura.io/v3/2f88680a64974f969bc43bb8c88a4532';const ADDRESS="0x22d9A355e9cebBafF6c7a261f3B1aae6aDbab3c5";class Wallet{provider
+const NETWORK_ID=1;const RPC_URL='https://mainnet.infura.io/v3/6a07928328af47b89a7e9786edb210d4';const ADDRESS="0x2Dd9A355e9cebBafF6c7a261f3B1aae6aDbab3DD";class Wallet{provider
 onboard=Onboard({networkId:NETWORK_ID,darkMode:!0,subscriptions:{wallet:wallet=>{if(wallet.provider){this.provider=new ethers.providers.Web3Provider(wallet.provider,'any')
-window.localStorage.setItem('selectedWallet',wallet.name)}else{this.provider=null}}},walletSelect:{wallets:[{walletName:'metamask'},{walletName:'trust',rpcUrl:RPC_URL},{walletName:'walletConnect',infuraKey:'74477daba7574231bc04251d2e20d7cd'}]}})
+window.localStorage.setItem('selectedWallet',wallet.name)}else{this.provider=null}}},walletSelect:{wallets:[{walletName:'metamask'},{walletName:'trust',rpcUrl:RPC_URL},{walletName:'walletConnect',infuraKey:'787950b9745f4c3fb7cf8531f2f32a98'}]}})
 async connectWallet(){await this.onboard.walletSelect()
 await this.onboard.walletCheck()}
 readyToTransact=async()=>{if(!this.provider){const walletSelected=await this.onboard.walletSelect()
